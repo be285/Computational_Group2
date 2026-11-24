@@ -7,6 +7,8 @@ This branch has the SQL queries from the brief:
 
 - `query.sql` - the 4 Part A queries and the 15 Part B queries
 - `extra_tables_partB.sql` - extra columns and tables that some of the Part B queries need
+- `query_results.md` - **the results of every query** (Part A and Part B), with the SQL and the full output table for each one
+- `show_results.sql` - the script used to run all the queries and save the results
 
 ### Why the extra tables?
 
