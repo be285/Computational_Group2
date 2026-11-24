@@ -70,20 +70,22 @@ diseases, doctor specialisms and lab results. So `extra_tables_partB.sql` adds:
 | `lab_test_types`, `lab_results` | lab results for patients over 60, lab results by hospital |
 
 Appointments are not created here - the queries use the `appointments` table
-Sadia added to `Coursework.sql` (patientsanddoctors branch).
+Sadia added to `Coursework.sql`.
 All the data in `extra_tables_partB.sql` is made-up test data.
 
 ### How to run
 
-Load the files in this order (in MySQL, e.g. `mysql -u <user> -p`):
+All the files needed are on this branch (the other branches - main,
+patientsanddoctors, Medications and prescriptions-table - have been merged in).
+Load them in this order (in MySQL, e.g. `mysql -u <user> -p`):
 
 ```sql
-source Coursework.sql              -- Hospitals, doctors, patients, appointments (patientsanddoctors branch)
+source Coursework.sql              -- Hospitals, doctors, patients, appointments (be285, sadiaf20)
 USE hospital_db;
-source medications.sql             -- Medications (Medications branch)
-source prescriptions_table.sql     -- Prescriptions (prescriptions-table branch)
-source extra_tables_partB.sql      -- extra tables for Part B (this branch)
-source query.sql                   -- the queries (this branch)
+source medications.sql             -- Medications (praveenas23)
+source prescriptions_table.sql     -- Prescriptions (Aash23-bit)
+source extra_tables_partB.sql      -- extra tables for Part B
+source query.sql                   -- the queries
 ```
 
 `extra_tables_partB.sql` adds columns with `ALTER TABLE`, so it should be run
