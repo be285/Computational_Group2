@@ -43,6 +43,31 @@ source query.sql                   -- the queries (this branch)
 `extra_tables_partB.sql` adds columns with `ALTER TABLE`, so it should be run
 once on a freshly built database.
 
+### Part A queries
+
+The 4 Part A queries are plain `SELECT` statements at the top of `query.sql`.
+To look up a different hospital / patient / doctor, change the value in the `WHERE`.
+
+| Task from the brief | How it works | Example value |
+|---|---|---|
+| All doctors based at a particular hospital | `doctors` filtered by `hospital_name` | `'Ashford Children Hospital'` |
+| All prescriptions for a particular patient, ordered by prescription date | `Prescriptions` filtered by `PatientID`, `ORDER BY PrescriptionDate DESC` | patient `493` |
+| All prescriptions a particular doctor has prescribed | `Prescriptions` filtered by `DoctorID` | doctor `91` |
+| All prescriptions ordered by patient name | `Prescriptions` joined to `patients`, `ORDER BY` first name then surname | - |
+
+```sql
+SELECT * FROM doctors WHERE hospital_name = 'Ashford Children Hospital';
+
+SELECT * FROM Prescriptions WHERE PatientID = 493 ORDER BY PrescriptionDate DESC;
+
+SELECT * FROM Prescriptions WHERE DoctorID = 91;
+
+SELECT *
+FROM Prescriptions
+JOIN patients ON Prescriptions.PatientID = patients.patient_id
+ORDER BY patients.patient_firstname, patients.patient_surname;
+```
+
 ### Part B queries
 
 Each Part B query is saved as a stored procedure, so it has a clear name and
