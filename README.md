@@ -47,9 +47,9 @@ Emergency Service facilities.
 
 
 
-## CX branch - SQL queries (Xuening Chang)
+## SQL queries
 
-This branch has the SQL queries from the brief:
+The SQL queries from the brief are in these files:
 
 - `query.sql` - the 4 Part A queries and the 15 Part B queries
 - `extra_tables_partB.sql` - extra columns and tables that some of the Part B queries need
@@ -70,20 +70,18 @@ diseases, doctor specialisms and lab results. So `extra_tables_partB.sql` adds:
 | `lab_test_types`, `lab_results` | lab results for patients over 60, lab results by hospital |
 
 Appointments are not created here - the queries use the `appointments` table
-Sadia added to `Coursework.sql`.
+in `Coursework.sql`.
 All the data in `extra_tables_partB.sql` is made-up test data.
 
 ### How to run
 
-All the files needed are on this branch (the other branches - main,
-patientsanddoctors, Medications and prescriptions-table - have been merged in).
-Load them in this order (in MySQL, e.g. `mysql -u <user> -p`):
+Load the files in this order (in MySQL, e.g. `mysql -u <user> -p`):
 
 ```sql
-source Coursework.sql              -- Hospitals, doctors, patients, appointments (be285, sadiaf20)
+source Coursework.sql              -- Hospitals, doctors, patients, appointments
 USE hospital_db;
-source medications.sql             -- Medications (praveenas23)
-source prescriptions_table.sql     -- Prescriptions (Aash23-bit)
+source medications.sql             -- Medications
+source prescriptions_table.sql     -- Prescriptions
 source extra_tables_partB.sql      -- extra tables for Part B
 source query.sql                   -- the queries
 ```

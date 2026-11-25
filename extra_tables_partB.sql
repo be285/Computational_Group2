@@ -1,7 +1,6 @@
 -- ============================================================
 -- extra_tables_partB.sql
 -- HPDM172 Group 2 - extra tables needed for the Part B queries
--- Xuening Chang (CX branch)
 --
 -- Some of the Part B queries need information our database
 -- doesn't have yet, so this file adds it:
@@ -10,7 +9,7 @@
 --   * doctor_specialisms
 --   * lab_test_types, lab_results
 -- Appointments are NOT made here - we use the appointments
--- table Sadia already added to Coursework.sql.
+-- table already in Coursework.sql.
 --
 -- Run order (needs these tables first):
 --   1. Coursework.sql            (Hospitals, doctors, patients, appointments)

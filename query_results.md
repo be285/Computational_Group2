@@ -1,9 +1,9 @@
 # Query results
 
-HPDM172 Group 2 - Xuening Chang (CX branch)
+HPDM172 Group 2
 
 These are the results of every query in `query.sql`, run on MySQL 8.0 on the module Ubuntu VM.
-The database was built in this order: `Coursework.sql` (patientsanddoctors branch), `medications.sql`, `prescriptions_table.sql`, `extra_tables_partB.sql`, then `query.sql`.
+The database was built in this order: `Coursework.sql`, `medications.sql`, `prescriptions_table.sql`, `extra_tables_partB.sql`, then `query.sql`.
 The results were saved by running `show_results.sql` with `tee`.
 
 Part B 1 and 2 change the data, so they were run first on a fresh database (new patient = 601).

@@ -1,7 +1,6 @@
 -- ============================================================
 -- query.sql
 -- HPDM172 Group 2 - SQL queries
--- Xuening Chang (CX branch)
 --
 -- Needs: Coursework.sql, medications.sql, prescriptions_table.sql
 -- and extra_tables_partB.sql loaded first (Part B uses the

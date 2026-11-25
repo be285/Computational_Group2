@@ -2,7 +2,6 @@
 -- show_results.sql
 -- HPDM172 Group 2 - runs every query once so the results can be
 -- saved (this is how query_results.md was made).
--- Xuening Chang (CX branch)
 --
 -- Run on a freshly built database AFTER query.sql (so the stored
 -- procedures exist). In MySQL:
