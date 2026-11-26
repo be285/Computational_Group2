@@ -44,11 +44,6 @@ Emergency Service facilities.
 • A list of patients registered with doctors who are based at hospital with <400 beds.
  
 
-
-
-
-## CX branch - SQL queries (Xuening Chang)
-
 This branch has the SQL queries from the brief:
 
 - `query.sql` - the 4 Part A queries and the 15 Part B queries
