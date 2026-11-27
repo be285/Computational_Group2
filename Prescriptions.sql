@@ -29,12 +29,12 @@ CREATE TABLE `Prescriptions` (
   `medication_id` int NOT NULL,
   `prescription_date` date NOT NULL,
   PRIMARY KEY (`prescription_id`),
-  KEY `FK_Prescriptions_Medications` (`medication_id`),
+  KEY `fk_Prescriptions_Medications` (`medication_id`),
   KEY `fk_presc_patient` (`patient_id`),
   KEY `fk_presc_doctor` (`doctor_id`),
   CONSTRAINT `fk_presc_doctor` FOREIGN KEY (`doctor_id`) REFERENCES `doctors` (`doctor_id`),
   CONSTRAINT `fk_presc_patient` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`),
-  CONSTRAINT `FK_Prescriptions_Medications` FOREIGN KEY (`medication_id`) REFERENCES `Medications` (`MedicationID`)
+  CONSTRAINT `fk_Prescriptions_Medications` FOREIGN KEY (`medication_id`) REFERENCES `Medications` (`medication_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
