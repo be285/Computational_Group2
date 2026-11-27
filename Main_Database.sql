@@ -81,10 +81,10 @@ DROP TABLE IF EXISTS `Medications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Medications` (
-  `medictaion_id` int NOT NULL,
-  `medictaion_name` varchar(100) NOT NULL,
-  PRIMARY KEY (`medictaion_id`),
-  UNIQUE KEY `MedicationName` (`medictaion_name`)
+  `medication_id` int NOT NULL,
+  `medication_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`medication_id`),
+  UNIQUE KEY `MedicationName` (`medication_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -107,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-27 12:55:43
+-- Dump completed on 2026-11-27 15:20:19
