@@ -57,3 +57,9 @@ SELECT * FROM Medications;
 
 SELECT COUNT(*) AS TotalMedications
 FROM Medications;
+-- Add Foreign Key to connect Prescriptions
+-- with the Medication table
+ALTER TABLE Prescriptions
+ADD CONSTRAINT FK_Prescriptions_Medications
+FOREIGN KEY (MedicationID)
+REFERENCES Medications(MedicationID);
